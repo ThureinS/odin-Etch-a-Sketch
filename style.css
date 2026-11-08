@@ -9,12 +9,3 @@
   width: 10px;
   height: 10px;
 }
-
-.square:hover {
-  background-color: yellow;
-}
-
-/* .break {
-  flex-basis: 100%;
-  height: 0;
-} */

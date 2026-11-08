@@ -13,10 +13,11 @@ function reDraw() {
   );
   let widthAndHeight = 160 / inputGridCount + "px";
   if (inputGridCount == null || inputGridCount == "") {
-    let text = "User cancelled the prompt.";
-    container.append(text);
+    console.log("User canceled the prompt");
   } else if (inputGridCount > 100) {
     alert("Please do not type more than 100");
+  } else if (inputGridCount < 0) {
+    alert("Please do not type negative numbers");
   } else {
     container.innerHTML = "";
     draw(inputGridCount, widthAndHeight);
@@ -30,6 +31,9 @@ function draw(inputGridCount, widthAndHeight = "10px") {
       square.classList.add("square");
       square.style.width = widthAndHeight;
       square.style.height = widthAndHeight;
+      square.addEventListener("mouseover", (event) => {
+        square.style.backgroundColor = "yellow";
+      });
       container.append(square);
     }
   }
