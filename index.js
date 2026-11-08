@@ -24,7 +24,7 @@ function reDraw() {
   }
 }
 
-function draw(inputGridCount, widthAndHeight = "10px") {
+function draw(inputGridCount, widthAndHeight = "25px") {
   for (let i = 0; i < inputGridCount; i++) {
     for (let j = 0; j < inputGridCount; j++) {
       const square = document.createElement("div");
